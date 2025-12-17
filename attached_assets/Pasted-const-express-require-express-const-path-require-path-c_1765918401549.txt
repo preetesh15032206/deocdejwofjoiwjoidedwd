@@ -1,0 +1,84 @@
+const express = require('express');
+const path = require('path');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Serve static files from public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// API routes for round data
+app.get('/api/round1', (req, res) => {
+    res.json({
+        title: "Round 1: FastTrack Quiz Challenge",
+        mode: "Online Quiz",
+        duration: "30 Minutes",
+        questions: "25 Multiple Choice Questions",
+        scoring: "Each correct answer: +4 points, Wrong answer: -1 point",
+        instructions: [
+            "No tab switching allowed - system will detect and refresh",
+            "Right-click and copy-paste are disabled",
+            "Complete the quiz within the time limit",
+            "Certificates awarded to all participants"
+        ],
+        qualification: "Top 50% participants qualify for Round 2",
+        certificate: "Digital certificate provided upon completion"
+    });
+});
+
+app.get('/api/round2', (req, res) => {
+    res.json({
+        title: "Round 2: Code Debugging Challenge",
+        mode: "Debugging Competition",
+        duration: "60 Minutes",
+        rules: [
+            "Fix bugs in provided code snippets",
+            "PDF submission only - no code files",
+            "Screenshot detection enabled",
+            "No external help allowed"
+        ],
+        submission: "Submit debugged code as PDF with explanations",
+        warnings: "Any cheating attempt leads to immediate disqualification"
+    });
+});
+
+app.get('/api/round3', (req, res) => {
+    res.json({
+        title: "Round 3: Web Cloning Challenge",
+        mode: "Website Recreation",
+        duration: "90 Minutes",
+        assets: "https://assets.decode-dominate.com/round3",
+        submission: "GitHub repository link only",
+        evaluation: [
+            "Design accuracy: 40%",
+            "Code quality: 30%", 
+            "Functionality: 20%",
+            "Creativity: 10%"
+        ],
+        restrictions: "No frameworks allowed - Pure HTML/CSS/JS only"
+    });
+});
+
+// Serve main pages
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/round1', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'round1.html'));
+});
+
+app.get('/round2', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'round2.html'));
+});
+
+app.get('/round3', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'round3.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});

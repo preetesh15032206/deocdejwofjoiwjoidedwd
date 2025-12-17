@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round 1 - CodeGlitch Conquest</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#9333ea'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-mono overflow-hidden">
+    <div class="flex h-screen">
+        <!-- Left Content Area - 75% -->
+        <div class="w-3/4 p-8 overflow-y-auto">
+            <div class="cyber-glitch-container" id="round1-content">
+                <div class="text-center mb-8">
+                    <h1 class="text-5xl font-bold mb-4 text-primary glitch-text" data-text="ROUND 1: FASTTRACK QUIZ">
+                        ROUND 1: FASTTRACK QUIZ
+                    </h1>
+                    <div class="cyber-button inline-block">TIME: 30:00</div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Quiz Info Panel -->
+                    <div class="cyber-card">
+                        <h2 class="text-3xl text-secondary mb-4">Challenge Details</h2>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-primary">Mode:</span>
+                                <span>Online Quiz</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-primary">Duration:</span>
+                                <span>30 Minutes</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-primary">Questions:</span>
+                                <span>25 MCQs</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-primary">Scoring:</span>
+                                <span>+4 / -1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instructions Panel -->
+                    <div class="cyber-card">
+                        <h2 class="text-3xl text-secondary mb-4">Instructions</h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-feather="alert-triangle" class="w-4 h-4 text-primary mr-2 mt-1"></i>
+                                <span>No tab switching allowed - system will auto-refresh</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="shield" class="w-4 h-4 text-primary mr-2 mt-1"></i>
+                                <span>Right-click and copy-paste are disabled</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="clock" class="w-4 h-4 text-primary mr-2 mt-1"></i>
+                                <span>Complete within time limit - auto-submit at end</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="award" class="w-4 h-4 text-primary mr-2 mt-1"></i>
+                                <span>Certificates for all participants</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quiz Interface -->
+                <div class="cyber-card mt-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-3xl text-secondary">Quiz Interface</h2>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-primary">Question: <span id="current-question">1</span>/25</span>
+                            <span class="text-secondary">Time: <span id="quiz-timer">30:00</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Sample Question -->
+                    <div class="quiz-question mb-6">
+                        <h3 class="text-xl text-primary mb-4">1. What does HTML stand for?</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-3 bg-gray-800 rounded cursor-pointer hover:bg-gray-700">
+                                <input type="radio" name="q1" class="mr-3" value="a">
+                                <span>Hyper Text Markup Language</span>
+                            </label>
+                            <label class="flex items-center p-3 bg-gray-800 rounded cursor-pointer hover:bg-gray-700">
+                                <input type="radio" name="q1" class="mr-3" value="b">
+                                <span>High Tech Modern Language</span>
+                            </label>
+                            <label class="flex items-center p-3 bg-gray-800 rounded cursor-pointer hover:bg-gray-700">
+                                <input type="radio" name="q1" class="mr-3" value="c">
+                                <span>Hyper Transfer Markup Language</span>
+                            </label>
+                            <label class="flex items-center p-3 bg-gray-800 rounded cursor-pointer hover:bg-gray-700">
+                                <input type="radio" name="q1" class="mr-3" value="d">
+                                <span>High Text Modern Language</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <button class="cyber-button opacity-50 cursor-not-allowed" disabled>Previous</button>
+                        <button class="cyber-button">Next Question</button>
+                    </div>
+                </div>
+
+                <!-- Qualification Info -->
+                <div class="cyber-card mt-8">
+                    <h2 class="text-3xl text-secondary mb-4">Qualification Criteria</h2>
+                    <p class="text-lg mb-4">Top 50% of participants based on scores will qualify for Round 2.</p>
+                    <div class="bg-gray-800 p-4 rounded">
+                        <h4 class="text-primary mb-2">Certificate Distribution:</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>All participants: Participation Certificate</li>
+                            <li>Top 10: Special Recognition Certificate</li>
+                            <li>Winners: Trophy + Certificate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Dashboard - 25% -->
+        <cyber-dashboard></cyber-dashboard>
+    </div>
+
+    <script src="components/dashboard.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+
+        // Quiz timer functionality
+        let quizTime = 30 * 60; // 30 minutes in seconds
+        const timerElement = document.getElementById('quiz-timer');
+
+        function updateQuizTimer() {
+            const minutes = Math.floor(quizTime / 60);
+            const seconds = quizTime % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            if (quizTime > 0) {
+                quizTime--;
+                setTimeout(updateQuizTimer, 1000);
+            } else {
+                timerElement.textContent = "TIME'S UP!";
+                timerElement.className = "text-red-500 font-bold";
+            }
+        }
+
+        updateQuizTimer();
+    </script>
+</body>
+</html>

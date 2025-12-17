@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round 3 - CodeGlitch Conquest</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#9333ea'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-mono overflow-hidden">
+    <div class="flex h-screen">
+        <!-- Left Content Area - 75% -->
+        <div class="w-3/4 p-8 overflow-y-auto">
+            <div class="cyber-glitch-container">
+                <div class="text-center mb-8">
+                    <h1 class="text-5xl font-bold mb-4 text-primary glitch-text" data-text="ROUND 3: WEB CLONING">
+                        ROUND 3: WEB CLONING
+                    </h1>
+                    <div class="cyber-button inline-block">TIME: 90:00</div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Challenge Info -->
+                    <div class="cyber-card col-span-2">
+                        <h2 class="text-3xl text-secondary mb-4">Final Round Challenge</h2>
+                        <p class="text-lg mb-4">Recreate the provided website design with pixel-perfect accuracy using only pure HTML, CSS, and JavaScript.</p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-gray-800 rounded">
+                                <i data-feather="clock" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <div class="text-primary font-bold">90 Minutes</div>
+                                <div class="text-sm">Time Limit</div>
+                            </div>
+                            <div class="text-center p-4 bg-gray-800 rounded">
+                                <i data-feather="git-branch" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                                <div class="text-primary font-bold">GitHub Only</div>
+                                <div class="text-sm">Submission Format</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Assets Download -->
+                    <div class="cyber-card">
+                        <h2 class="text-3xl text-secondary mb-4">Assets</h2>
+                        <a href="https://assets.decode-dominate.com/round3" class="cyber-button w-full text-center block mb-4">
+                            <i data-feather="download" class="inline w-4 h-4 mr-2"></i>
+                            Download Assets
+                        </a>
+                        <p class="text-sm text-gray-400">Includes design mockups, images, and specifications</p>
+                    </div>
+                </div>
+
+                <!-- Target Design Preview -->
+                <div class="cyber-card mb-8">
+                    <h2 class="text-3xl text-secondary mb-4">Target Design</h2>
+                    <div class="bg-gray-900 p-6 rounded-lg border-2 border-dashed border-secondary">
+                        <div class="text-center py-12">
+                            <i data-feather="image" class="w-16 h-16 text-secondary mx-auto mb-4"></i>
+                            <p class="text-secondary">Design preview will be available when round starts</p>
+                            <p class="text-sm text-gray-500 mt-2">Target website to clone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evaluation Criteria -->
+                <div class="cyber-card mb-8">
+                    <h2 class="text-3xl text-secondary mb-4">Evaluation Criteria</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-4 bg-gray-800 rounded">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-primary">Design Accuracy</span>
+                                <span class="text-secondary font-bold">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-primary">Code Quality</span>
+                                <span class="text-secondary font-bold">30%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-primary">Functionality</span>
+                                <span class="text-secondary font-bold">20%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-primary">Creativity</span>
+                                <span class="text-secondary font-bold">10%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submission Guidelines -->
+                <div class="cyber-card">
+                    <h2 class="text-3xl text-secondary mb-4">Submission Guidelines</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h3 class="text-xl text-primary mb-3">✅ Allowed</h3>
+                            <ul class="space-y-2 text-green-400">
+                                <li class="flex items-center">
+                                    <i data-feather="check" class="w-4 h-4 mr-2"></i>
+                                    Pure HTML5, CSS3, JavaScript ES6+
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="check" class="w-4 h-4 mr-2"></i>
+                                    CSS Grid and Flexbox
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="check" class="w-4 h-4 mr-2"></i>
+                                    Modern JavaScript features
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="check" class="w-4 h-4 mr-2"></i>
+                                    GitHub repository submission
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-primary mb-3">❌ Not Allowed</h3>
+                            <ul class="space-y-2 text-red-400">
+                                <li class="flex items-center">
+                                    <i data-feather="x" class="w-4 h-4 mr-2"></i>
+                                    CSS frameworks (Bootstrap, Tailwind)
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="x" class="w-4 h-4 mr-2"></i>
+                                    JavaScript frameworks (React, Vue)
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="x" class="w-4 h-4 mr-2"></i>
+                                    Preprocessors (SASS, LESS)
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-feather="x" class="w-4 h-4 mr-2"></i>
+                                    External libraries and plugins
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Submission -->
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h3 class="text-xl text-primary mb-3">GitHub Submission</h3>
+                        <div class="flex space-x-4">
+                            <input type="text"
+                                   class="flex-1 bg-gray-900 border border-gray-700 rounded-lg p-3"
+                                   placeholder="https://github.com/username/repository">
+                            <button class="cyber-button bg-green-600 hover:bg-green-700">
+                                Submit Repository
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-400 mt-2">Make sure repository is public and contains all necessary files</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Dashboard - 25% -->
+        <cyber-dashboard></cyber-dashboard>
+    </div>
+
+    <script src="components/dashboard.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+
+        // Fullscreen enforcement for final round
+        function requestFullscreen() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+
+        // Request fullscreen when page loads
+        setTimeout(requestFullscreen, 1000);
+
+        // Monitor fullscreen changes
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                window.apiService.showWarning('Fullscreen required! Returning to fullscreen mode.');
+                setTimeout(requestFullscreen, 1000);
+            }
+        });
+    </script>
+</body>
+</html>

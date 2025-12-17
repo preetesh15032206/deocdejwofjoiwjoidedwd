@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGlitch Conquest - Decode & Dominate</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#9333ea'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white font-mono overflow-hidden">
+    <div class="flex h-screen">
+        <!-- Left Content Area - 75% -->
+        <div class="w-3/4 p-8 overflow-y-auto">
+            <div class="cyber-glitch-container">
+                <h1 class="text-5xl font-bold mb-6 text-primary glitch-text" data-text="WELCOME TO CODEGLITCH CONQUEST">
+                    WELCOME TO CODEGLITCH CONQUEST
+                </h1>
+
+                <div class="cyber-card mb-8">
+                    <h2 class="text-3xl text-secondary mb-4">About the Event</h2>
+                    <p class="text-lg mb-4">Decode & Dominate is KIITFEST's premier coding competition where programmers battle through three intense rounds of challenges.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                        <div class="cyber-feature-card">
+                            <i data-feather="clock" class="w-12 h-12 text-primary mb-4"></i>
+                            <h3 class="text-xl text-secondary mb-2">3 Rounds</h3>
+                            <p>Quiz → Debugging → Web Cloning</p>
+                        </div>
+                        <div class="cyber-feature-card">
+                            <i data-feather="award" class="w-12 h-12 text-primary mb-4"></i>
+                            <h3 class="text-xl text-secondary mb-2">Certificates</h3>
+                            <p>For all participants + Winners</p>
+                        </div>
+                        <div class="cyber-feature-card">
+                            <i data-feather="users" class="w-12 h-12 text-primary mb-4"></i>
+                            <h3 class="text-xl text-secondary mb-2">Team Event</h3>
+                            <p>Compete with the best coders</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cyber-card">
+                    <h2 class="text-3xl text-secondary mb-4">Event Timeline</h2>
+                    <div class="relative">
+                        <div class="absolute left-4 top-0 h-full w-1 bg-secondary"></div>
+                        <div class="space-y-8 relative z-10">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-primary mr-4 flex items-center justify-center">
+                                    <span class="text-black font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl text-primary">Round 1 - FastTrack Quiz</h3>
+                                    <p class="text-gray-300">25 Questions | 30 Minutes</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-secondary mr-4 flex items-center justify-center">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl text-primary">Round 2 - Code Debugging</h3>
+                                    <p class="text-gray-300">60 Minutes | PDF Submission</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 rounded-full bg-primary mr-4 flex items-center justify-center">
+                                    <span class="text-black font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl text-primary">Round 3 - Web Cloning</h3>
+                                    <p class="text-gray-300">90 Minutes | GitHub Submission</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Dashboard - 25% -->
+        <cyber-dashboard></cyber-dashboard>
+    </div>
+
+    <script src="components/dashboard.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        // Anti-cheat security
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('copy', event => event.preventDefault());
+        document.addEventListener('cut', event => event.preventDefault());
+        document.addEventListener('paste', event => event.preventDefault());
+    </script>
+</body>
+</html>
